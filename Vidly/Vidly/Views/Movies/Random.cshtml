@@ -1,0 +1,32 @@
+﻿@*
+    Author: Jacob Storer
+    Date: 08/09/2019
+    Description: Movie Rental Application
+    Framework: ASP.NET
+    Uses: Razor, MVC, ViewModels & Models
+*@
+
+@model Vidly.ViewModels.RandomMovieViewModel
+<!-- Code Block -->
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Is it popular? Code Block -->
+@{
+    var className = Model.Customers.Count > 0 ? "popular" : null;
+}
+<h2 class="@className">@Model.Movie.Name</h2>
+@if (Model.Customers.Count == 0)
+{
+    <text>No one has rented this movie before.</text>
+}
+else
+{
+    <ul>
+        @foreach (var customer in Model.Customers)
+        {
+            <li>@customer.Name</li>
+        }
+    </ul>
+}

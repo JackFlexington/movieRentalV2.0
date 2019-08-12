@@ -1,0 +1,31 @@
+﻿@*
+    Author: Jacob Storer
+    Date: 08/09/2019
+    Description: Movie Rental Application
+    Framework: ASP.NET
+    Uses: Razor, MVC, ViewModels & Models
+*@
+@model Vidly.ViewModels.CustomerViewModel
+@{
+    ViewBag.Title = "Default";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Customers</h2>
+@if (Model.Customers.Count == 0) // Data exists?
+{;
+    <tr><td>We don't have any customers yet.</td></tr> // Output
+}
+else
+{
+    <table>
+        <tr><th>Customer</th></tr>
+        @*
+            Loop through Model.Customers Object;
+            Use information to generate custom hyperlink used to navigate website directory;
+        *@
+        @foreach (var customer in Model.Customers)
+        {
+            <tr><td>@Html.ActionLink(@customer.Name, "Details/" + @customer.Id)</td></tr>
+        }
+    </table>
+}
