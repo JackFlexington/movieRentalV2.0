@@ -1,4 +1,13 @@
-﻿using System.Data.Entity;
+﻿/*
+    Author: Jacob Storer
+    Date: 08/11/2019
+    Description: Movie Rental Application
+    Framework: ASP.NET
+    Uses: Razor, MVC, Entity Framework, MySQL Database, Lambda Expressions
+*/
+
+/* Imports */
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;

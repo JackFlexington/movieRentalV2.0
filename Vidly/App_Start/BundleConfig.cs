@@ -1,9 +1,9 @@
 ﻿/*
     Author: Jacob Storer
-    Date: 08/09/2019
+    Date: 08/11/2019
     Description: Movie Rental Application
     Framework: ASP.NET
-    Uses: Razor, MVC, ViewModels & Models
+    Uses: Razor, MVC, Entity Framework, MySQL Database, Lambda Expressions
 */
 
 /* Imports */

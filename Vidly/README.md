@@ -1,2 +1,2 @@
-# movieRentalAppV2.0
+# movieRentalV2.0
 Implemented Database via Entity Framework (Code-First)
